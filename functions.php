@@ -32,6 +32,9 @@ function edxchild_enqueue_styles() {
 
 	// Add FontAwesome.
 	wp_enqueue_style( 'edxchild-fontawesome', 'https://use.fontawesome.com/releases/v5.11.2/css/all.css', '20191209', 'all' );
+
+	// Add Custom JS for top menu.
+	wp_enqueue_script( 'edxchild-top-menu', get_stylesheet_directory_uri() . '/js/top-menu.js', array(), '20191209', true );
 }
 
 /**

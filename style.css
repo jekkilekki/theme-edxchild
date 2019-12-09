@@ -38,15 +38,27 @@
 	padding: 10px;
 }
 
+/* Fixed Header ----------------------------- */
+body {
+	margin-top: 146px; /* JS handles the actual number, but this is the height of the normal, full screen menu */
+}
+
+#site-header {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	box-shadow: 4px 8px 16px rgba(0,0,0,0.14);
+	transition: all 0.5s;
+	z-index: 10;
+}
+
 /* Search Toggle ----------------------------- */
 .toggle-wrapper.search-toggle-wrapper {
 	background: #cd2653;
 	width: 60px;
 	height: 60px;
 	border-radius: 30px;
-	position: fixed;
-	top: 20rem;
-	right: 3rem;
+	margin-right: 4rem;
 	box-shadow: 2px 4px 8px rgba(0,0,0,0.32);
 }
 
