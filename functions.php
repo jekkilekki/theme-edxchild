@@ -23,6 +23,13 @@ function edxchild_enqueue_styles() {
 		'edxchild-style',
 		get_stylesheet_directory_uri() . '/style.css',
 		array( $parent_style ),
-		wp_get_theme()->get( 'Version' )
+		// wp_get_theme()->get( 'Version' ).
+		filemtime( get_stylesheet_directory() . '/style.css' )
 	);
+
+	// Add Custom Google serif font.
+	wp_enqueue_style( 'edxchild-serif-font', 'https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400i,700|Lora:400,400i,700,700i', '20191209', 'all' );
+
+	// Add FontAwesome.
+	wp_enqueue_style( 'edxchild-fontawesome', 'https://use.fontawesome.com/releases/v5.11.2/css/all.css', '20191209', 'all' );
 }

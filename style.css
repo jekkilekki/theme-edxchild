@@ -12,7 +12,29 @@
  Text Domain:  edxchild
 */
 
-body {
-	color: maroon;
-	background: green;
+/* Font Families ----------------------------- */
+
+.entry-content p,
+.entry-content ol,
+.entry-content ul,
+.entry-content dl,
+.entry-content dt,
+.widget_text p,
+.widget_text ol,
+.widget_text ul,
+.widget_text dl,
+.widget_text dt,
+.widget-content .rssSummary {
+	font-family: "Lora", "Libre Baskerville", NonBreakingSpaceOverride, "Hoefler Text", Garamond, "Times New Roman", serif;
+	letter-spacing: normal;
+}
+
+/* Pull Blockquotes ----------------------------- */
+.wp-block-pullquote::before,
+.wp-block-pullquote.is-style-solid-color::before {
+	font-family: "Font Awesome 5 Free";
+	content: "\f10e";
+	font-weight: 900;
+	font-size: 2rem;
+	padding: 10px;
 }
