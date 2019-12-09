@@ -13,7 +13,6 @@
 */
 
 /* Font Families ----------------------------- */
-
 .entry-content p,
 .entry-content ol,
 .entry-content ul,
@@ -37,4 +36,40 @@
 	font-weight: 900;
 	font-size: 2rem;
 	padding: 10px;
+}
+
+/* Search Toggle ----------------------------- */
+.toggle-wrapper.search-toggle-wrapper {
+	background: #cd2653;
+	width: 60px;
+	height: 60px;
+	border-radius: 30px;
+	position: fixed;
+	top: 20rem;
+	right: 3rem;
+	box-shadow: 2px 4px 8px rgba(0,0,0,0.32);
+}
+
+.toggle-wrapper.search-toggle-wrapper::before {
+	display: none;
+}
+
+.toggle.search-toggle {
+	padding: 0px 19px;
+	color: white;
+	height: 40px;
+}
+
+.toggle.search-toggle:active,
+.toggle.search-toggle:focus {
+	outline: none;
+}
+
+.toggle.search-toggle svg {
+	color: white;
+}
+
+.toggle.search-toggle .toggle-inner .toggle-text {
+	color: white;
+	top: 35px;
 }
