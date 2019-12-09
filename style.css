@@ -73,3 +73,34 @@
 	color: white;
 	top: 35px;
 }
+
+/* Footer & Widgets ----------------------------- */
+.footer-widgets-wrapper {
+	display: block;
+	width: 100%;
+	margin: 0;
+}
+
+.footer-widgets.column-one.grid-item {
+	width: 100%;
+	margin: 0;
+	display: grid;
+	grid-template-columns: repeat(3, calc( 33% - 3rem) );
+	grid-gap: 5rem;
+}
+
+.footer-widgets.column-two.grid-item {
+	width: 100%;
+	margin: 0;
+	display: grid;
+	grid-template-columns: repeat(5, calc( 20% - 4rem) );
+	grid-gap: 5rem;
+	margin-top: 5rem;
+	padding-top: 5rem;
+	border-top: 2px solid #cd2653;
+}
+
+.footer-widgets.column-one .widget,
+.footer-widgets.column-two .widget {
+	margin-top: 0;
+}
