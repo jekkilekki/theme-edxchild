@@ -20,7 +20,7 @@ document.addEventListener( "DOMContentLoaded", function() { // Make sure the DOM
 
 		var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
-		if ( scrollTop > lastScroll ) { // Scroll DOWN = hide
+		if ( scrollTop > lastScroll && scrollTop > topMenu.offsetHeight ) { // Scroll DOWN = hide
 
 			topMenu.style.top = '-200px';
 

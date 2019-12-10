@@ -9,8 +9,6 @@
  * @since 1.0.0
  */
 
-add_action( 'wp_enqueue_scripts', 'edxchild_enqueue_styles' );
-
 /**
  * Register and Enqueue Styles.
  */
@@ -36,6 +34,7 @@ function edxchild_enqueue_styles() {
 	// Add Custom JS for top menu.
 	wp_enqueue_script( 'edxchild-top-menu', get_stylesheet_directory_uri() . '/js/top-menu.js', array(), '20191209', true );
 }
+add_action( 'wp_enqueue_scripts', 'edxchild_enqueue_styles' );
 
 /**
  * Logo & Description
@@ -82,7 +81,8 @@ function edxchild_site_logo( $args = array(), $echo = true ) {
 		$classname = $args['title_class'];
 	}
 
-	$wrap = $args['condition'] ? 'home_wrap' : 'single_wrap';
+	// $wrap = $args['condition'] ? 'home_wrap' : 'single_wrap';
+	$wrap = 'home_wrap';
 
 	$html = sprintf( $args[ $wrap ], $classname, $contents );
 
@@ -103,3 +103,45 @@ function edxchild_site_logo( $args = array(), $echo = true ) {
 	echo $html; //phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 
 }
+
+/**
+ * WordPress Filter example (Title).
+ *
+ * @param string $title The title of the post.
+ * @param int    $id    The post Id.
+ */
+function edxchild_filter_the_title( $title, $id = null ) {
+
+	if ( in_category( 'block', $id ) ) {
+		return '<i class="post-title-icon fas fa-dice-d6" title="Block Editor Post"></i> ' . $title;
+	}
+
+	if ( in_category( 'classic', $id ) ) {
+		return '<i class="post-title-icon fas fa-file-alt" title="Classic Editor Post"></i> ' . $title;
+	}
+
+	return $title;
+
+}
+add_filter( 'the_title', 'edxchild_filter_the_title', 10, 2 );
+add_filter( 'single_cat_title', 'edxchild_filter_the_title' );
+
+/**
+ * WordPress Filter example (Excerpt Length).
+ *
+ * @param int $length The length of the excerpt.
+ */
+function edxchild_filter_excerpt_length( $length ) {
+	return 20;
+}
+add_filter( 'excerpt_length', 'edxchild_filter_excerpt_length', 999 );
+
+/**
+ * WordPress Filter example (Excerpt More).
+ *
+ * @param string $more The excerpt more string.
+ */
+function edxchild_filter_excerpt_more( $more ) {
+	return '&hellip; <a href="' . get_the_permalink() . '">[read more]</a>';
+}
+add_filter( 'excerpt_more', 'edxchild_filter_excerpt_more' );

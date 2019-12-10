@@ -86,6 +86,20 @@ body {
 	top: 35px;
 }
 
+/* Post / Category Title Icon (filter) ----------------------------- */
+.post-title-icon {
+	opacity: 0.5;
+	font-size: 50%;
+	position: relative;
+	top: -10px;
+	left: -10px;
+}
+
+.archive-title .post-title-icon {
+	top: -5px;
+	left: 0;
+}
+
 /* Footer & Widgets ----------------------------- */
 .footer-widgets-wrapper {
 	display: block;
