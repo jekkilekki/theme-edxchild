@@ -127,14 +127,14 @@
 						<div class="header-toggles hide-no-js">
 
 						<?php
-						if ( has_nav_menu( 'expanded' ) ) {
+						if ( has_nav_menu( 'expanded' ) || is_active_sidebar( 'sidebar-edxchild' ) ) {
 							?>
 
 							<div class="toggle-wrapper nav-toggle-wrapper has-expanded-menu">
 
 								<button class="toggle nav-toggle desktop-nav-toggle" data-toggle-target=".menu-modal" data-toggle-body-class="showing-menu-modal" aria-expanded="false" data-set-focus=".close-nav-toggle">
 									<span class="toggle-inner">
-										<span class="toggle-text"><?php esc_html_e( 'Menu', '' ); ?></span>
+										<span class="toggle-text"><?php esc_html_e( 'More', '' ); ?></span>
 										<span class="toggle-icon">
 											<?php twentytwenty_the_theme_svg( 'ellipsis' ); ?>
 										</span>

@@ -145,3 +145,33 @@ function edxchild_filter_excerpt_more( $more ) {
 	return '&hellip; <a href="' . get_the_permalink() . '">[read more]</a>';
 }
 add_filter( 'excerpt_more', 'edxchild_filter_excerpt_more' );
+
+/**
+ * Register widget areas.
+ *
+ * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
+ */
+function edxchild_register_sidebar_widgets() {
+
+	// Arguments used in all register_sidebar() calls.
+	$shared_args = array(
+		'before_title'  => '<h2 class="widget-title subheading heading-size-3">',
+		'after_title'   => '</h2>',
+		'before_widget' => '<div class="widget %2$s"><div class="widget-content">',
+		'after_widget'  => '</div></div>',
+	);
+
+	// Sidebar Widgets.
+	register_sidebar(
+		array_merge(
+			$shared_args,
+			array(
+				'name'        => __( 'Sidebar', 'edxchild' ),
+				'id'          => 'sidebar-edxchild',
+				'description' => __( 'Widgets in this area will be displayed under the Expanded / Mobile menu.', 'edxchild' ),
+			)
+		)
+	);
+
+}
+add_action( 'widgets_init', 'edxchild_register_sidebar_widgets' );

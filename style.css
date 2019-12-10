@@ -101,6 +101,10 @@ body {
 }
 
 /* Footer & Widgets ----------------------------- */
+.menu-middle {
+	margin-top: 5rem;
+}
+
 .footer-widgets-wrapper {
 	display: block;
 	width: 100%;
