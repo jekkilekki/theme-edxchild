@@ -134,3 +134,31 @@ body {
 .footer-widgets.column-two .widget {
 	margin-top: 0;
 }
+
+.footer-colophon-menu {
+	border-top: 1px solid #dcd7ca;
+	margin-top: 4.3rem;
+	padding-top: 2rem;
+}
+
+.footer-colophon-menu .footer-menu-wrapper {
+	margin: 0 auto;
+}
+
+.colophon-menu {
+	font-size: 1.3rem;
+	font-weight: 400;
+}
+
+.footer-colophon-menu a {
+	color: #6d6d6d;
+}
+
+.footer-colophon-menu li:first-child {
+	list-style-type: none;
+	margin-left: 0;
+}
+
+#site-footer {
+	padding-bottom: 2rem;
+}

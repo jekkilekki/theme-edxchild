@@ -175,3 +175,11 @@ function edxchild_register_sidebar_widgets() {
 
 }
 add_action( 'widgets_init', 'edxchild_register_sidebar_widgets' );
+
+/**
+ * Register a new Colophon menu.
+ */
+function edxchild_register_colophon_menu() {
+	register_nav_menu( 'colophon', __( 'Colophon Menu', 'edxchild' ) );
+}
+add_action( 'after_setup_theme', 'edxchild_register_colophon_menu' );
