@@ -95,7 +95,8 @@ body {
 	left: -10px;
 }
 
-.archive-title .post-title-icon {
+.archive-title .post-title-icon,
+li .post-title-icon {
 	top: -5px;
 	left: 0;
 }
