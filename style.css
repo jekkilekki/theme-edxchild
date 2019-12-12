@@ -96,7 +96,8 @@ body {
 }
 
 .archive-title .post-title-icon,
-li .post-title-icon {
+li .post-title-icon,
+.title-inner .post-title-icon {
 	top: -5px;
 	left: 0;
 }
@@ -162,4 +163,28 @@ li .post-title-icon {
 
 #site-footer {
 	padding-bottom: 2rem;
+}
+
+/* Error 404 Widgets ----------------------------- */
+.error404-widgets {
+	display: grid;
+	grid-template-columns: repeat(4, calc( 25% - 3.75rem ) );
+	grid-gap: 5rem;
+	margin-top: 5rem;
+	padding-top: 5rem;
+	border-top: 1px solid #dcd7ca;
+}
+
+.error404-widgets .widget,
+.error404-widgets .widgettitle {
+	margin-top: 0;
+}
+
+.error404-widgets .widgettitle {
+	font-size: 4rem;
+}
+
+.error404-media {
+	max-width: 40rem;
+	margin: 0 auto;
 }
